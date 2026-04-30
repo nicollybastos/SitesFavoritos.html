@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Meus Sites Favoritos - Nicolly</title>
     <style>
-        /* Estilo ultra fiel à Captura de Tela 2026-04-30 às 18.54.56.png */
+        /* Reset para fidelidade total à imagem */
         body {
             margin: 0;
             padding: 0;
@@ -12,15 +12,13 @@
             background-color: #ffffff;
         }
 
-        /* Cabeçalho com ondas suaves */
+        /* Cabeçalho com ondas suaves conforme Captura de Tela 2026-04-30 às 18.54.56.png */
         header {
             background-color: #fce4ec;
-            background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent), 
-                              url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f06292" fill-opacity="0.3" d="M0,160L80,181.3C160,203,320,245,480,234.7C640,224,800,160,960,138.7C1120,117,1280,139,1360,149.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f06292" fill-opacity="0.3" d="M0,160L80,181.3C160,203,320,245,480,234.7C640,224,800,160,960,138.7C1120,117,1280,139,1360,149.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>');
             background-size: cover;
             padding: 50px 0 20px 0;
             text-align: center;
-            position: relative;
         }
 
         .header-top {
@@ -47,25 +45,20 @@
             font-size: 65px;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: -1px;
         }
 
-        /* Barra roxa do nome que atravessa o topo */
+        /* Barra de nome roxa */
         .name-bar {
             background-color: #b39ddb;
             color: #ffffff;
-            font-family: 'Arial', sans-serif;
             font-weight: bold;
             font-size: 18px;
             padding: 4px 50px;
             display: inline-block;
             margin-top: -5px;
-            position: relative;
-            z-index: 5;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        /* Faixa Rosa Choque */
+        /* Linha divisória rosa choque */
         .magenta-divider {
             height: 12px;
             background-color: #e91e63;
@@ -73,48 +66,49 @@
             margin-top: 30px;
         }
 
-        /* Layout Horizontal dos Sites */
+        /* Layout Horizontal */
         .content-row {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 40px 10px;
-            gap: 10px;
+            gap: 15px;
         }
 
         .site-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 210px;
+            width: 200px;
         }
 
         .site-label {
-            font-weight: 900;
+            font-weight: bold;
             font-size: 14px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             text-transform: uppercase;
         }
 
+        /* Removido o fundo rosa conforme solicitado */
         .logo-container {
-            background-color: #e91e63; /* Rosa das logos no seu print */
             width: 200px;
-            height: 260px;
+            height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 15px;
+            background-color: transparent; /* Fundo removido */
         }
 
         .logo-container img {
-            max-width: 85%;
-            max-height: 85%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
 
-        /* Botão "BOTÃO LINK DO SITE" */
+        /* Botão estilizado */
         .link-button {
-            background-color: #eceff1;
+            background-color: #f1f3f4;
             color: #673ab7;
             text-decoration: none;
             padding: 12px;
@@ -123,23 +117,21 @@
             font-size: 12px;
             width: 100%;
             text-align: center;
-            border: 1px solid #cfd8dc;
-            text-transform: uppercase;
+            border: 1px solid #ddd;
         }
 
-        /* Setas cinzas entre os sites */
+        /* Setas cinzas entre os logos */
         .nav-arrow {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background-color: #e0e0e0;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ffffff;
-            font-size: 35px;
-            font-weight: bold;
-            margin-top: 45px; /* Alinhado ao centro da logo */
+            color: #fff;
+            font-size: 30px;
+            margin-top: 35px; /* Alinha com a altura das logos */
         }
     </style>
 </head>
