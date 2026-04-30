@@ -5,84 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus sites favoritos</title>
     <style>
-        /* Estilização inspirada nas imagens enviadas */
+        /* Estilo focado na Captura de Tela 2026-04-30 às 18.16.14.png */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Arial Black', Gadget, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
             text-align: center;
         }
 
-        /* Cabeçalho rosa com ondas */
-        header {
+        /* Topo com as ondas fluidas rosa */
+        .top-wave {
             background-color: #fce4ec;
-            padding: 40px 20px;
-            border-bottom: 5px solid #e91e63;
-            position: relative;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f06292" fill-opacity="0.3" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            padding: 60px 20px 20px;
         }
 
-        .header-content {
+        .header-main {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .user-icon {
+        .icon-circle {
             background-color: #673ab7;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+            font-size: 40px;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 60px;
             margin: 0;
+            color: #000;
+            font-family: 'Impact', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        .user-name-tag {
+        .name-banner {
             background-color: #b39ddb;
             color: white;
+            padding: 5px 60px;
             display: inline-block;
-            padding: 5px 20px;
-            margin-top: 10px;
-            font-size: 14px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: -10px;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Container dos Cards */
+        /* Divisor Rosa vibrante conforme Captura de Tela 2026-04-30 às 18.16.27.png */
+        .pink-divider {
+            height: 15px;
+            background-color: #e91e63;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        /* Grid de Cards */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 50px 20px;
-            gap: 30px;
+            gap: 40px;
+            padding: 40px;
         }
 
         .site-card {
-            width: 220px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 250px;
+            text-align: center;
         }
 
         .site-card h2 {
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
 
         .logo-box {
-            width: 200px;
-            height: 250px;
-            background-color: #e91e63; /* Cor rosa vibrante das logos no seu print */
+            background-color: #e91e63;
+            width: 250px;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -90,61 +101,54 @@
         }
 
         .logo-box img {
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
+            max-width: 90%;
+            max-height: 90%;
         }
 
-        /* Botão arredondado conforme a imagem */
+        /* Botão Arredondado Cinza claro */
         .btn-link {
-            background-color: #eeeeee;
+            background-color: #f0f0f0;
             color: #673ab7;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;
+            padding: 12px;
+            border-radius: 30px;
             font-weight: bold;
-            font-size: 14px;
-            width: 100%;
+            display: block;
             border: 1px solid #ddd;
-            transition: 0.3s;
         }
 
-        .btn-link:hover {
-            background-color: #e0e0e0;
-        }
-
-        footer {
-            margin-top: 50px;
+        /* Rodapé ondulado da Captura de Tela 2026-04-30 às 18.16.38.png */
+        .footer-waves {
+            background-color: #f8bbd0;
             height: 100px;
-            background: repeating-linear-gradient(45deg, #fce4ec, #fce4ec 20px, #f8bbd0 20px, #f8bbd0 40px);
-            border-top: 5px solid #e91e63;
+            position: relative;
+            margin-top: 50px;
+            clip-path: polygon(0% 15%, 5% 0%, 10% 15%, 15% 0%, 20% 15%, 25% 0%, 30% 15%, 35% 0%, 40% 15%, 45% 0%, 50% 15%, 55% 0%, 60% 15%, 65% 0%, 70% 15%, 75% 0%, 80% 15%, 85% 0%, 90% 15%, 95% 0%, 100% 15%, 100% 100%, 0% 100%);
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="user-icon">👤</div>
+    <div class="top-wave">
+        <div class="header-main">
+            <div class="icon-circle">👤</div>
             <h1>Meus sites favoritos</h1>
         </div>
-        <!-- Substitua pelo seu nome completo -->
-        <div class="user-name-tag">NICOLI GÓES BASTOS</div>
-    </header>
+        <div class="name-banner">NICOLLY GÓES BASTOS</div>
+    </div>
 
-    <!-- Container dos Cards - Substitua o bloco antigo por este -->
+    <div class="pink-divider"></div>
+
     <div class="container">
-        <!-- Site 1 -->
+        <!-- Repita este bloco para os 5 sites -->
         <div class="site-card">
             <h2>LinkedIn</h2>
             <div class="logo-box">
-                <!-- Verifique se o arquivo no seu PC é 'linkedin.jpeg' (tudo minúsculo) -->
                 <img src="linkedin.jpeg" alt="LinkedIn">
             </div>
             <a href="https://www.linkedin.com" class="btn-link" target="_blank">LINK DO SITE</a>
         </div>
 
-        <!-- Site 2 -->
         <div class="site-card">
             <h2>TikTok</h2>
             <div class="logo-box">
@@ -153,7 +157,6 @@
             <a href="https://www.tiktok.com" class="btn-link" target="_blank">LINK DO SITE</a>
         </div>
 
-        <!-- Site 3 -->
         <div class="site-card">
             <h2>Instagram</h2>
             <div class="logo-box">
@@ -162,7 +165,6 @@
             <a href="https://www.instagram.com" class="btn-link" target="_blank">LINK DO SITE</a>
         </div>
 
-        <!-- Site 4 -->
         <div class="site-card">
             <h2>WhatsApp</h2>
             <div class="logo-box">
@@ -171,7 +173,6 @@
             <a href="https://web.whatsapp.com" class="btn-link" target="_blank">LINK DO SITE</a>
         </div>
 
-        <!-- Site 5 -->
         <div class="site-card">
             <h2>Spotify</h2>
             <div class="logo-box">
@@ -181,7 +182,7 @@
         </div>
     </div>
 
-    <footer></footer>
+    <div class="footer-waves"></div>
 
 </body>
 </html>
