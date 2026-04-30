@@ -2,187 +2,196 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus sites favoritos</title>
     <style>
-        /* Estilo focado na Captura de Tela 2026-04-30 às 18.16.14.png */
+        /* Reset básico */
         body {
-            font-family: 'Arial Black', Gadget, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: sans-serif;
             background-color: #fff;
+        }
+
+        /* Cabeçalho Rosa Ondulado */
+        header {
+            background-color: #fce4ec;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f06292" fill-opacity="0.2" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+            background-size: cover;
+            padding: 40px 20px;
             text-align: center;
         }
 
-        /* Topo com as ondas fluidas rosa */
-        .top-wave {
-            background-color: #fce4ec;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f06292" fill-opacity="0.3" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
-            background-size: cover;
-            background-position: bottom;
-            padding: 60px 20px 20px;
-        }
-
-        .header-main {
+        .header-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .icon-circle {
+        .user-icon {
             background-color: #673ab7;
             color: white;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 35px;
         }
 
         h1 {
-            font-size: 60px;
+            font-family: 'Arial Narrow', sans-serif;
+            font-size: 55px;
             margin: 0;
-            color: #000;
-            font-family: 'Impact', sans-serif;
             text-transform: uppercase;
+            font-weight: bold;
         }
 
-        .name-banner {
+        .name-tag {
             background-color: #b39ddb;
             color: white;
-            padding: 5px 60px;
             display: inline-block;
-            font-size: 20px;
+            padding: 5px 40px;
             font-weight: bold;
-            margin-top: -10px;
-            position: relative;
-            z-index: 2;
+            font-size: 18px;
+            margin-top: -5px;
         }
 
-        /* Divisor Rosa vibrante conforme Captura de Tela 2026-04-30 às 18.16.27.png */
-        .pink-divider {
-            height: 15px;
+        /* Linha Rosa Choque separadora */
+        .pink-bar {
+            height: 10px;
             background-color: #e91e63;
             width: 100%;
-            margin-top: 30px;
         }
 
-        /* Grid de Cards */
-        .container {
+        /* Container dos Sites Lado a Lado */
+        .sites-wrapper {
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            gap: 40px;
-            padding: 40px;
+            padding: 40px 10px;
+            gap: 15px;
+            overflow-x: auto; /* Permite rolar se a tela for pequena */
         }
 
-        .site-card {
-            width: 250px;
-            text-align: center;
+        .site-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
         }
 
-        .site-card h2 {
-            font-size: 18px;
+        .site-name {
+            font-weight: bold;
+            font-size: 14px;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
 
-        .logo-box {
+        .logo-placeholder {
             background-color: #e91e63;
-            width: 250px;
-            height: 300px;
+            width: 200px;
+            height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 15px;
         }
 
-        .logo-box img {
-            max-width: 90%;
-            max-height: 90%;
+        .logo-placeholder img {
+            max-width: 85%;
+            max-height: 85%;
         }
 
-        /* Botão Arredondado Cinza claro */
-        .btn-link {
+        /* Botão arredondado cinza */
+        .site-link {
             background-color: #f0f0f0;
             color: #673ab7;
             text-decoration: none;
-            padding: 12px;
-            border-radius: 30px;
+            padding: 10px;
+            border-radius: 25px;
             font-weight: bold;
-            display: block;
+            font-size: 13px;
+            width: 100%;
+            text-align: center;
             border: 1px solid #ddd;
         }
 
-        /* Rodapé ondulado da Captura de Tela 2026-04-30 às 18.16.38.png */
-        .footer-waves {
-            background-color: #f8bbd0;
-            height: 100px;
-            position: relative;
-            margin-top: 50px;
-            clip-path: polygon(0% 15%, 5% 0%, 10% 15%, 15% 0%, 20% 15%, 25% 0%, 30% 15%, 35% 0%, 40% 15%, 45% 0%, 50% 15%, 55% 0%, 60% 15%, 65% 0%, 70% 15%, 75% 0%, 80% 15%, 85% 0%, 90% 15%, 95% 0%, 100% 15%, 100% 100%, 0% 100%);
+        /* Seta cinza entre os sites */
+        .arrow-next {
+            background-color: #e0e0e0;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 40px; /* Alinha com a logo */
         }
     </style>
 </head>
 <body>
 
-    <div class="top-wave">
-        <div class="header-main">
-            <div class="icon-circle">👤</div>
+    <header>
+        <div class="header-container">
+            <div class="user-icon">👤</div>
             <h1>Meus sites favoritos</h1>
         </div>
-        <div class="name-banner">NICOLLY GÓES BASTOS</div>
-    </div>
+        <div class="name-tag">NICOLI GÓES BASTOS</div>
+    </header>
 
-    <div class="pink-divider"></div>
+    <div class="pink-bar"></div>
 
-    <div class="container">
-        <!-- Repita este bloco para os 5 sites -->
-        <div class="site-card">
-            <h2>LinkedIn</h2>
-            <div class="logo-box">
+    <div class="sites-wrapper">
+        <!-- Site 1 -->
+        <div class="site-column">
+            <div class="site-name">LinkedIn</div>
+            <div class="logo-placeholder">
                 <img src="linkedin.jpeg" alt="LinkedIn">
             </div>
-            <a href="https://www.linkedin.com" class="btn-link" target="_blank">LINK DO SITE</a>
+            <a href="https://www.linkedin.com" class="site-link" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
 
-        <div class="site-card">
-            <h2>TikTok</h2>
-            <div class="logo-box">
+        <!-- Seta -->
+        <div class="arrow-next">❯</div>
+
+        <!-- Site 2 -->
+        <div class="site-column">
+            <div class="site-name">TikTok</div>
+            <div class="logo-placeholder">
                 <img src="tiktok.jpeg" alt="TikTok">
             </div>
-            <a href="https://www.tiktok.com" class="btn-link" target="_blank">LINK DO SITE</a>
+            <a href="https://www.tiktok.com" class="site-link" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
 
-        <div class="site-card">
-            <h2>Instagram</h2>
-            <div class="logo-box">
+        <!-- Seta -->
+        <div class="arrow-next">❯</div>
+
+        <!-- Site 3 -->
+        <div class="site-column">
+            <div class="site-name">Instagram</div>
+            <div class="logo-placeholder">
                 <img src="instagram.jpeg" alt="Instagram">
             </div>
-            <a href="https://www.instagram.com" class="btn-link" target="_blank">LINK DO SITE</a>
+            <a href="https://www.instagram.com" class="site-link" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
 
-        <div class="site-card">
-            <h2>WhatsApp</h2>
-            <div class="logo-box">
+        <!-- Seta -->
+        <div class="arrow-next">❯</div>
+
+        <!-- Site 4 -->
+        <div class="site-column">
+            <div class="site-name">WhatsApp</div>
+            <div class="logo-placeholder">
                 <img src="whatsapp.jpeg" alt="WhatsApp">
             </div>
-            <a href="https://web.whatsapp.com" class="btn-link" target="_blank">LINK DO SITE</a>
-        </div>
-
-        <div class="site-card">
-            <h2>Spotify</h2>
-            <div class="logo-box">
-                <img src="spotify.jpeg" alt="Spotify">
-            </div>
-            <a href="https://www.spotify.com" class="btn-link" target="_blank">LINK DO SITE</a>
+            <a href="https://web.whatsapp.com" class="site-link" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
     </div>
-
-    <div class="footer-waves"></div>
 
 </body>
 </html>
