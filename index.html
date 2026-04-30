@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus sites favoritos</title>
+    <style>
+        /* Estilização inspirada nas imagens enviadas */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        /* Cabeçalho rosa com ondas */
+        header {
+            background-color: #fce4ec;
+            padding: 40px 20px;
+            border-bottom: 5px solid #e91e63;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .user-icon {
+            background-color: #673ab7;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .user-name-tag {
+            background-color: #b39ddb;
+            color: white;
+            display: inline-block;
+            padding: 5px 20px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Container dos Cards */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            gap: 30px;
+        }
+
+        .site-card {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .site-card h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .logo-box {
+            width: 200px;
+            height: 250px;
+            background-color: #e91e63; /* Cor rosa vibrante das logos no seu print */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .logo-box img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        /* Botão arredondado conforme a imagem */
+        .btn-link {
+            background-color: #eeeeee;
+            color: #673ab7;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .btn-link:hover {
+            background-color: #e0e0e0;
+        }
+
+        footer {
+            margin-top: 50px;
+            height: 100px;
+            background: repeating-linear-gradient(45deg, #fce4ec, #fce4ec 20px, #f8bbd0 20px, #f8bbd0 40px);
+            border-top: 5px solid #e91e63;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="user-icon">👤</div>
+            <h1>Meus sites favoritos</h1>
+        </div>
+        <!-- Substitua pelo seu nome completo -->
+        <div class="user-name-tag">NICOLI GÓES BASTOS</div>
+    </header>
+
+    <div class="container">
+        <!-- Site 1 -->
+        <div class="site-card">
+            <h2>LinkedIn</h2>
+            <div class="logo-box">
+                <img src="linkedin.jpg" alt="LinkedIn">
+            </div>
+            <a href="https://www.linkedin.com" class="btn-link" target="_blank">LINK DO SITE</a>
+        </div>
+
+        <!-- Site 2 -->
+        <div class="site-card">
+            <h2>TikTok</h2>
+            <div class="logo-box">
+                <img src="tiktok.jpg" alt="TikTok">
+            </div>
+            <a href="https://www.tiktok.com" class="btn-link" target="_blank">LINK DO SITE</a>
+        </div>
+
+        <!-- Site 3 -->
+        <div class="site-card">
+            <h2>Instagram</h2>
+            <div class="logo-box">
+                <img src="instagram.jpg" alt="Instagram">
+            </div>
+            <a href="https://www.instagram.com" class="btn-link" target="_blank">LINK DO SITE</a>
+        </div>
+
+        <!-- Site 4 -->
+        <div class="site-card">
+            <h2>WhatsApp</h2>
+            <div class="logo-box">
+                <img src="whatsapp.jpg" alt="WhatsApp">
+            </div>
+            <a href="https://web.whatsapp.com" class="btn-link" target="_blank">LINK DO SITE</a>
+        </div>
+
+        <!-- Site 5 -->
+        <div class="site-card">
+            <h2>Spotify</h2>
+            <div class="logo-box">
+                <img src="spotify.jpg" alt="Spotify">
+            </div>
+            <a href="https://www.spotify.com" class="btn-link" target="_blank">LINK DO SITE</a>
+        </div>
+    </div>
+
+    <footer></footer>
+
+</body>
+</html>
