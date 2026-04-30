@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Meus Sites Favoritos - Nicolly</title>
     <style>
-        /* Reset para fidelidade total à imagem */
         body {
             margin: 0;
             padding: 0;
@@ -12,7 +11,7 @@
             background-color: #ffffff;
         }
 
-        /* Cabeçalho com ondas suaves conforme Captura de Tela 2026-04-30 às 18.54.56.png */
+        /* Cabeçalho fiel à Captura de Tela 2026-04-30 às 18.54.56.png */
         header {
             background-color: #fce4ec;
             background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f06292" fill-opacity="0.3" d="M0,160L80,181.3C160,203,320,245,480,234.7C640,224,800,160,960,138.7C1120,117,1280,139,1360,149.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>');
@@ -47,7 +46,6 @@
             text-transform: uppercase;
         }
 
-        /* Barra de nome roxa */
         .name-bar {
             background-color: #b39ddb;
             color: #ffffff;
@@ -58,7 +56,6 @@
             margin-top: -5px;
         }
 
-        /* Linha divisória rosa choque */
         .magenta-divider {
             height: 12px;
             background-color: #e91e63;
@@ -66,38 +63,38 @@
             margin-top: 30px;
         }
 
-        /* Layout Horizontal */
+        /* AJUSTE PARA COLUNA: Mudança de row para column */
         .content-row {
             display: flex;
+            flex-direction: column; /* Itens um abaixo do outro */
             align-items: center;
             justify-content: center;
             padding: 40px 10px;
-            gap: 15px;
+            gap: 50px; /* Espaçamento maior entre as linhas */
         }
 
         .site-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 200px;
+            width: 250px; /* Largura levemente maior para destaque */
         }
 
         .site-label {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
 
-        /* Removido o fundo rosa conforme solicitado */
         .logo-container {
             width: 200px;
-            height: 250px;
+            height: 200px; /* Altura ajustada para melhor proporção em lista */
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 15px;
-            background-color: transparent; /* Fundo removido */
+            background-color: transparent;
         }
 
         .logo-container img {
@@ -106,7 +103,6 @@
             object-fit: contain;
         }
 
-        /* Botão estilizado */
         .link-button {
             background-color: #f1f3f4;
             color: #673ab7;
@@ -118,20 +114,6 @@
             width: 100%;
             text-align: center;
             border: 1px solid #ddd;
-        }
-
-        /* Setas cinzas entre os logos */
-        .nav-arrow {
-            width: 55px;
-            height: 55px;
-            background-color: #e0e0e0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 30px;
-            margin-top: 35px; /* Alinha com a altura das logos */
         }
     </style>
 </head>
@@ -157,8 +139,6 @@
             <a href="https://www.linkedin.com" class="link-button" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
 
-        <div class="nav-arrow">❯</div>
-
         <!-- Site 2 -->
         <div class="site-card">
             <div class="site-label">TikTok</div>
@@ -168,8 +148,6 @@
             <a href="https://www.tiktok.com" class="link-button" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
 
-        <div class="nav-arrow">❯</div>
-
         <!-- Site 3 -->
         <div class="site-card">
             <div class="site-label">Instagram</div>
@@ -178,8 +156,6 @@
             </div>
             <a href="https://www.instagram.com" class="link-button" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
-
-        <div class="nav-arrow">❯</div>
 
         <!-- Site 4 -->
         <div class="site-card">
@@ -192,13 +168,14 @@
 
         <!-- Site 5 -->
         <div class="site-card">
-            <div class="site-label">WhatsApp</div>
+            <div class="site-label">Spotify</div>
             <div class="logo-container">
                 <img src="spotify.jpeg" alt="Spotify">
             </div>
-            <a href="https://web.spotify.com" class="link-button" target="_blank">BOTÃO LINK DO SITE</a>
+            <a href="https://www.spotify.com" class="link-button" target="_blank">BOTÃO LINK DO SITE</a>
         </div>
     </div>
 
 </body>
+</html>
 </html>
