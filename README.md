@@ -1,4 +1,5 @@
-Meus Sites Favoritos 🌐
+**Meus Sites Favoritos 🌐**
+
 Este é um projeto de página web pessoal desenvolvido para listar e organizar links de acesso rápido aos sites e redes sociais mais utilizados. A interface foi projetada com um layout minimalista, focado na experiência do usuário e na organização visual em coluna.
 
 🚀 Tecnologias Utilizadas
